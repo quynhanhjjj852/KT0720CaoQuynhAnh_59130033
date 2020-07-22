@@ -1,0 +1,75 @@
+﻿@model KT0720CaoQuynhAnh_59130033.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SANPHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XuatXu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XuatXu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAISP.TenLSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAISP.TenLSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

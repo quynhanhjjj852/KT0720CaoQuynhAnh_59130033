@@ -1,0 +1,94 @@
+﻿@model KT0720CaoQuynhAnh_59130033.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var xuatxu = "";
+}
+
+<h3>Xác nhận thông tin cần xóa</h3>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XuatXu)
+        </dt>
+
+        <dd>
+            @{if (Model.XuatXu == true)
+                { xuatxu = "Trong nước"; }
+                else
+                { xuatxu = "Ngoại nhập"; }
+            }
+            @xuatxu
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCC)
+        </dd>
+
+        <dt>
+            Loại SP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAISP.TenLSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <span>Bạn có chắc muốn xóa thông tin này? </span>
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>
